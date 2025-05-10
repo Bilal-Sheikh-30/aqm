@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>IoT Air Quality Monitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #data-container {
+            margin-top: 20px;
+        }
+        .data-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+          <div class="logo">✨ Air Quality Monitering</div>
+          <div class="navbar-links">
+            <a href="#" class="nav-item">Home</a>
+            <a href="#data-container" class="nav-item">Live Data</a>
+            <a href="#weekly-chart-body" class="nav-item">Charts</a>
+            <a href="#components-section" class="nav-item">Components</a>
+            <a href="#update-firmware" class="nav-item">Update Firmware</a>
+          </div>
+        </div>
+      </nav>
+    <div class="background-img">
+<!-- Slogan headings -->
+</div>
+    <div class="slogan-container">
+        <h1 id="main-heading">AIR QUALITY MONITORING</h1>
+        <h2 id="slogan-text">Breathe Better. Live Healthier.</h2>
+      </div>
+      <div class="project-overview">
+        <h1>Project Overview</h1>
+        <p>The goal of this project is to design and implement an IoT-based air quality monitoring system that leverages the capabilities of the ESP32 microcontroller and a DHT11 sensor to measure and report environmental conditions such as temperature and humidity. This project is aimed at monitoring air quality in real-time, providing valuable data for various applications, including indoor air quality control and environmental monitoring.</p>
+    </div>  
+<!-- Project Details -->
+</div>
+    <div class="project-details">
+        <div class="text-container">
+            <h2>System Functionality</h2>
+            <p><strong>Real-Time Monitoring:</strong> The system collects data from the DHT11 sensor and transmits it to the cloud platform at regular intervals.</p>
+            <p><strong>Data Display:</strong> The data will be visualized in an intuitive and user-friendly web dashboard, where users can track temperature and humidity levels over time.</p>
+            <p><strong>Alerting:</strong> The system can be configured to send alerts if the air quality falls outside predefined thresholds for temperature or humidity.</p>
+        </div>
+        <div class="image-container">
+            <img src="/images/sys_func.png" alt="Project Image" />
+        </div>
+    </div>
+    <div class="applications-section">
+        <div class="applications-text-container">
+            <h2>Applications</h2>
+            <p><strong>Indoor Air Quality Control:</strong> The system can be used in homes, offices, or industrial settings to monitor and maintain optimal indoor air quality.</p>
+            <p><strong>Environmental Monitoring:</strong> By monitoring temperature and humidity, this system can provide insights into environmental conditions, helping researchers and environmentalists assess climate change impacts.</p>
+            <p><strong>Smart Home Integration:</strong> The system can be integrated into smart home systems, where it can trigger actions like turning on fans or air purifiers when air quality falls below acceptable levels.</p>
+        </div>
+        <div class="applications-image-container">
+            <img src="/images/applications.png" alt="Smart Home Integration Image">
+        </div>
+    </div>
+<!-- Live data would be loaded here -->
+<div class ="reading_graph_wrapper">
+    <div class="tempAlert"></div>
+    <div class="humAlert"></div>
+    <div id="data-container">
+    <!-- Sensor data will be loaded here -->
+</div>
+<div class="timestamp-wrapper">
+<div id="dnt">
+
+</div>
+</div>
+<!-- Real time charts -->
+<div class="chart-container">
+    
+    <div class="chart-card">
+        <canvas id="temperatureChart"></canvas>
+    </div>
+    <div class="chart-card">
+        <canvas id="humidityChart"></canvas>
+    </div>
+</div>
+</div>
+<!-- Weekly graph -->
+<div class="weekly-chart-body" id="weekly-chart-body">
+    <h2>Weekly Average Data</h2>
+    <div class="weekly-chart-row">
+      <div class="weekly-chart-card">
+        <canvas id="weeklytempChart"></canvas>
+        <div class="weekly-chart-title">Average Temperature (°C)</div>
+      </div>
+      <div class="weekly-chart-card">
+        <canvas id="weeklyhumChart"></canvas>
+        <div class="weekly-chart-title">Average Humidity (%)</div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Components -->
+<div class="components-section" id="components-section">
+    <h2>System Components</h2>
+    <div class="components-container">
+        <!-- Component 1 -->
+        <div class="component-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/images/esp32.jpg" alt="ESP32 Microcontroller">
+                </div>
+                <div class="card-back">
+                    <h3>ESP32 Microcontroller</h3>
+                    <p>The brain of the system that collects sensor data and connects to WiFi.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Component 2 -->
+        <div class="component-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/images/dh11.jpg" alt="DHT11 Sensor">
+                </div>
+                <div class="card-back">
+                    <h3>DHT11 Sensor</h3>
+                    <p>Measures temperature and humidity with digital signal output.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Component 3 -->
+        <div class="component-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/images/AC_Adapter.jpg" alt="AC Adapter">
+                </div>
+                <div class="card-back">
+                    <h3>AC Adapter</h3>
+                    <p>Converts AC to stable 5V DC power for the system.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Component 4 -->
+        <div class="component-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="/images/USB_Cable.jpg" alt="USB Cable">
+                </div>
+                <div class="card-back">
+                    <h3>USB Cable</h3>
+                    <p>Delivers power to the ESP32 during development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Firmware to upload -->
+ <div id="update-firmware">
+    <h2>Update Firmware</h2>
+    <form id="firmware-form" enctype="multipart/form-data" method="POST" action="/upload-firmware">
+      <label for="firmware-file">Choose Firmware File (e.g., .bin)</label>
+      <input type="file" id="firmware-file" name="firmware" accept=".bin" required>
+      <button type="submit">Upload Firmware</button>
+      <p id="upload-success">Firmware uploaded successfully!</p>
+    </form>
+  </div>
+
+    <!-- Ionicons scripts (keep these in head or before end of body) -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Custom JS file -->
+<script src="/js/index.js"></script>
+
+</body>
+</html>

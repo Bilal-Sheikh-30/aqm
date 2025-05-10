@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ultra Stylish Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Add backdrop blur for glass effect */
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body >
+<!-- Super Luxurious Desktop Navbar -->
+<nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">✨ WebBrand</div>
+      <div class="navbar-links">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#portfolio" class="nav-item">Portfolio</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
+  <style>
+    /* Navbar Container */
+    .navbar {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    .navbar-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+    }
+  
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 8s infinite linear;
+    }
+  
+    /* Links */
+    .navbar-links {
+      display: flex;
+      gap: 40px;
+    }
+  
+    .nav-item {
+      position: relative;
+      font-size: 18px;
+      font-weight: 600;
+      color: #444;
+      text-decoration: none;
+      padding: 8px 12px;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+  
+    /* Underline Animation */
+    .nav-item::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+      transition: all 0.4s ease;
+      transform: translateX(-50%);
+      border-radius: 10px;
+    }
+  
+    .nav-item:hover::after {
+      width: 100%;
+    }
+  
+    /* Hover effect */
+    .nav-item:hover {
+      color: #7c3aed;
+      transform: translateY(-2px) scale(1.1);
+    }
+  
+    /* Active effect when clicked */
+    .nav-item.active {
+      color: #8b5cf6;
+      background: rgba(139, 92, 246, 0.1);
+      padding: 8px 14px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+      transition: all 0.4s ease;
+    }
+  
+    /* Logo shimmer animation */
+    @keyframes shimmer {
+      0% {background-position: 0%;}
+      100% {background-position: 200%;}
+    }
+  </style>
+  
+  <script>
+    // Make active link on click
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        navItems.forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+  
+  
+  
+  
+  
+
+
+</body>
+</html>

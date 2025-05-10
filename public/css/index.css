@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+#data-container {
+    margin-top: 20px;
+}
+.data-item {
+    margin-bottom: 10px;
+}
+/* Navbar css */
+
+
+/* New background section styling */
+.background-img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+}
+
+/* Ensure navbar floats over image */
+
+
+.background-img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+
+
+    .slogan-container {
+        position: absolute;
+        top: 303px; /* Adjust depending on your navbar height */
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+      }
+      
+      #main-heading {
+        font-size: 4rem; /* Main heading size */
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      }
+      
+      #slogan-text {
+        font-size: 2rem; /* Slogan size */
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        animation: fadeInOut 12s infinite;
+        transition: opacity 1s ease-in-out;
+        margin-top: 10px; /* Space between heading and slogan */
+      }
+      
+      @keyframes fadeInOut {
+        0%   { opacity: 0; }
+        10%  { opacity: 1; }
+        40%  { opacity: 1; }
+        50%  { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      
+      .project-overview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #f5f5f5; 
+        margin-top: 32px;
+        margin-left: 30px;
+        border-radius: 10px;
+    }
+    
+    .project-overview h1 {
+        font-size: 3rem;
+        color: #333; 
+        margin-bottom: 20px;
+    }
+    
+    .project-overview p {
+        font-size: 1.25rem; 
+        color: #555; 
+        line-height: 1.6;
+        max-width: 800px; 
+        margin: 0 auto; 
+    }
+
+/* New Section Styling */
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px;
+    background-color: #fafafa; 
+    border-radius: 10px; 
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.text-container {
+    flex: 1;
+    padding-right: 30px;
+    color: #333;
+}
+
+.text-container h2 {
+    font-size: 2.4rem;
+    font-weight: 600; 
+    color: #2c3e50; 
+    margin-bottom: 25px;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    color: #7f8c8d; 
+    line-height: 1.8;
+    text-align: left; 
+    margin-bottom: 20px;
+    transition: color 0.3s ease; 
+}
+
+.text-container p:hover {
+    color: #151516; 
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 73vh;
+    border-radius: 12px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.image-container img:hover {
+    transform: scale(1.05); 
+}
+
+
+.project-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    opacity: 0.1;
+    z-index: -1; 
+}
+
+/* Application Section Styling */
+.applications-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px;
+    background-color: #fafafa; /* Light grey background for subtle contrast */
+    margin-top: 60px; /* Increased margin for better separation */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    flex-direction: row-reverse; /* Swap the order of text and image */
+}
+
+.applications-text-container {
+    flex: 1;
+    padding-left: 30px; /* Space between text and image */
+    color: #333;
+}
+
+.applications-text-container h2 {
+    font-size: 2.4rem;
+    font-weight: 600; /* Bold heading */
+    color: #2c3e50; /* Darker shade for heading */
+    margin-bottom: 25px;
+    letter-spacing: 1px; /* Add some spacing between letters */
+    text-transform: uppercase; /* Make the heading uppercase */
+}
+
+.applications-text-container p {
+    font-size: 1.1rem;
+    color: #7f8c8d; /* Slightly lighter grey text for better readability */
+    line-height: 1.8;
+    text-align: left; /* Left-aligned text */
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.applications-text-container p:hover {
+    color: #151516; /* Color change on hover for interactivity */
+}
+
+.applications-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-right: 30px; /* Space between text and image */
+}
+
+.applications-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* Slightly more rounded corners for a softer feel */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.applications-image-container img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Optional - Adding a background gradient for extra visual appeal */
+.applications-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3498db, #9b59b6); /* Gradient from blue to purple */
+    opacity: 0.1; /* Subtle gradient effect */
+    z-index: -1; /* Place the gradient behind the content */
+}
+.navigation.scrolled {
+    background-color: #7b8cd6; /* New background color */
+    color: black; /* Change text color if needed */
+  }
+
+
+  /*data showing*/
+        /* Container for holding the data cards */
+
+        /* Container for holding the data cards */
+        /* Container for the Cards */
+
+    
+        #data-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Styling for Each Meter Card */
+        .meter-card {
+            width: 350px;
+            height: 350px;
+            background: #202020;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Label and Value Styling */
+        .meter-card .label {
+            font-size: 25px;
+            color: #bbb;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .meter-card .value {
+            font-size: 32px;
+            font-weight: bold;
+            /* color: #4caf50; */
+            color: #12b0c7;
+        }
+
+        /* SVG Gauge Container */
+        .svg-meter {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            transform: rotate(-90deg);
+        }
+
+        /* Circle Background */
+        .background-circle {
+            fill: none;
+            stroke: #333;
+            stroke-width: 20;
+        }
+
+        /* Dynamic Progress Circle */
+        .progress-circle {
+            fill: none;
+            /* stroke: #4caf50; */
+            stroke: #12b0c7;
+            stroke-width: 20;
+            stroke-linecap: round;
+            stroke-dasharray: 440; /* Circumference of circle */
+            stroke-dashoffset: 440;
+            transition: stroke-dashoffset 0.6s ease;
+        }
+
+        /* Timestamp Styling */
+
+        .card-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .timestamp {
+            display: inline;
+            padding: 10px 20px;
+            margin-top: 24px;
+            border-radius: 12px;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #fff;
+            background: linear-gradient(135deg, #b8a3cf, #2575fc);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+          
+          .timestamp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+          }
+          
+          .timestamp-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+          }
+          
+        .meter-card:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }    
+ /* Update Firware CSS           */
+
+  #update-firmware {
+    padding: 50px;
+    background-color: #e0f7fa; /* Light Sky Blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#update-firmware h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Arial', sans-serif;
+    color: #007bff; /* Sky blue */
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#firmware-form {
+    max-width: 550px;
+    margin: auto;
+    background: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+#firmware-form label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #007bff; /* Sky blue */
+}
+
+#firmware-file {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #007bff; /* Sky blue border */
+    border-radius: 8px;
+    background-color: #f0f8ff; /* Light Blue */
+    color: #007bff;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#firmware-file:focus {
+    border-color: #00bcd4; /* Light cyan blue on focus */
+    outline: none;
+}
+
+#firmware-form button {
+    background-color: #00bcd4; /* Light cyan blue */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#firmware-form button:hover {
+    background-color: #007bff; /* Sky blue */
+}
+
+#upload-success {
+    display: none;
+    color: #4caf50; /* Green for success */
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Update firware ends here   */
+
+/* for time series graph */
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    /* added */
+    
+}
+.reading_graph_wrapper{
+      background: linear-gradient(rgba(245, 247, 250, 0.5), rgba(195, 207, 226, 0.4)),
+    url('https://images.pexels.com/photos/2114014/pexels-photo-2114014.jpeg') center/cover no-repeat;
+backdrop-filter: blur(1px);
+}
+
+.chart-card {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+canvas #temperatureChart ,#humidityChart {
+    width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        flex-direction: column;
+    }
+    .chart-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* time series ends here */
+/* components starts here */
+/* Components Section Styles */
+.components-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.components-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+    /* margin-left: 35%; */
+}
+
+.components-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.component-card {
+    width: 330px; /* Increased from 280px */
+    height: 280px; /* Increased from 200px */
+    min-width: 330px; /* Prevents shrinking */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents cards from shrinking */
+}
+
+.component-card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px; /* Slightly larger radius */
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.card-front {
+    background-color: #fff;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    /* background: linear-gradient(135deg, #6e8efb, #a777e3);ss */
+    background: linear-gradient(135deg, #2e6e8b, #c8bada);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.card-back h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem; /* Larger text */
+}
+
+.card-back p {
+    margin: 0;
+    font-size: 1.1rem; /* Larger text */
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1600px) {
+    .components-container {
+        justify-content: flex-start;
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .component-card {
+        width: 300px;
+        height: 240px;
+        min-width: 300px;
+    }
+}
+
+/* components ends  */
+
+/* weekly chart */
+
+
+  .weekly-chart-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    min-height: 100vh;
+    background-color: #f4f7fc;
+    margin: 15px;
+    border-radius: 10px;
+    
+  }
+  
+  .weekly-chart-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .weekly-chart-card {
+    width: 690px;
+    height: 360px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weekly-chart-card canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .weekly-chart-title {
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .weekly-chart-body h2 {
+    text-align: center;
+    margin-top: -70px;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  
+  /* Optional: Responsive layout */
+  @media (max-width: 850px) {
+    .weekly-chart-card {
+      width: 90%;
+      height: 300px;
+    }
+  }
+  
+  
+/* weekly chart ends here */
+
+
+.tempAlert, .humAlert {
+    position: absolute;
+    width: 150px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 18%;
+  }
+  
+ 
+  .tempAlert[data-status="freezing"] { background: linear-gradient(135deg, #a5d8ff 0%, #74c0fc 100%); }
+  .tempAlert[data-status="very-cold"] { background: linear-gradient(135deg, #91a7ff 0%, #748ffc 100%); }
+  .tempAlert[data-status="cool"] { background: linear-gradient(135deg, #b197fc 0%, #9775fa 100%); }
+  .tempAlert[data-status="comfortable"] { background: linear-gradient(135deg, #96f2d7 0%, #63e6be 100%); }
+  .tempAlert[data-status="warm"] { background: linear-gradient(135deg, #ffd8a8 0%, #ffc078 100%); }
+  .tempAlert[data-status="hot"] { background: linear-gradient(135deg, #ffa8a8 0%, #ff8787 100%); }
+  .tempAlert[data-status="very-hot"] { background: linear-gradient(135deg, #ff8787 0%, #ff6b6b 100%); }
+  
+
+  .humAlert[data-status="very-dry"] { background: linear-gradient(135deg, #ffe3e3 0%, #ffc9c9 100%); }
+  .humAlert[data-status="dry"] { background: linear-gradient(135deg, #fcc2d7 0%, #faa2c1 100%); }
+  .humAlert[data-status="comfortable"] { background: linear-gradient(135deg, #d0ebff 0%, #a5d8ff 100%); }
+  .humAlert[data-status="humid"] { background: linear-gradient(135deg, #99e9f2 0%, #66d9e8 100%); }
+  .humAlert[data-status="very-humid"] { background: linear-gradient(135deg, #8ce99a 0%, #69db7c 100%); }
+  .humAlert[data-status="extremely-humid"] { background: linear-gradient(135deg, #63e6be 0%, #38d9a9 100%); }
+
+  .tempAlert div, .humAlert div {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .tempAlert div::before, .humAlert div::before {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .tempAlert { margin-left: 13%; }
+  .humAlert { margin-left: 80%; }
